@@ -13,11 +13,11 @@ inputs:
   branch:
     description: Branch details
     required: true
-    default: ${{ github.branch }}
+    default: ${{ github.event.inputs.branch }}
   since:
     description: Since when
     required: true
-    default: ${{ github.since }}  
+    default: ${{ github.event.inputs.since }}  
 
 runs:
   using: composite
@@ -30,8 +30,8 @@ runs:
       shell: bash
       env:
         ORG_REPO: ${{ inputs.org_repo }}
-        branch: ${{ github.branch }}
-        since: ${{ github.since }}
+        branch: ${{ github.event.inputs.branch }}
+        since: ${{ github.event.inputs.since }}
         GITHUB_TOKEN: ${{ github.token }}
         WORKSPACE: ${{ github.action_path }}
       run: |
