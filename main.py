@@ -27,13 +27,6 @@ def extract_pr_number(commit_message):
 # Loop through merged commits in the last week
 for commit in repo.get_commits(branch):  # 'master' is the branch name
     if commit:  # Check if the commit is a merge commit
-        pr_number = extract_pr_number(commit.message)
-        if pr_number:
-            # Get the files changed in the merge commit
-            changed_files = commit.stats.files
-            for file_path in changed_files:
-                print(f"PR #{pr_number} - {file_path}")
-        else:
-            changed_files = commit.stats.files
-            for file_path in changed_files:
-                print(f"{file_path}")
+        # Get the files changed in the merge commit
+        changed_files = commit.stats.files
+            print(f"{file_path}")
