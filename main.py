@@ -15,7 +15,7 @@ print("g   :",g)
 repo = g.get_repo(repo_name)
 print("repo   :", repo)
 prohibited_file = os.path.join(workspace_path, 'proh_src.txt')
-
+branch = "main"
 # Function to extract PR number from the commit message
 def extract_pr_number(commit_message):
     match = re.search(r"#(\d+)", commit_message)
