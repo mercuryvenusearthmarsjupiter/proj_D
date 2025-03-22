@@ -25,7 +25,7 @@ def extract_pr_number(commit_message):
     return None
 
 # Loop through merged commits in the last week
-for commit in repo.iter_commits(branch, since=since):  # 'master' is the branch name
+for commit in repo.get_commits(branch, since=since):  # 'master' is the branch name
     if commit.merge:  # Check if the commit is a merge commit
         pr_number = extract_pr_number(commit.message)
         if pr_number:
