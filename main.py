@@ -29,4 +29,5 @@ for commit in repo.get_commits(branch):  # 'master' is the branch name
     if commit:  # Check if the commit is a merge commit
         # Get the files changed in the merge commit
         changed_files = commit.stats.files
+        for file_path in changed_files:
             print(f"{file_path}")
