@@ -1,0 +1,6 @@
+bad_word
+gmail
+yahoo
+https://abc/xyz.com
+wikipedia
+intel.com
