@@ -1,6 +1,7 @@
 import os
 import re
 from github import Github, BadCredentialsException, GithubException
+import git
 
 # Get environment variables
 repo_name = os.getenv('ORG_REPO')
